@@ -1,0 +1,399 @@
+
+@jd_red: rgb(201, 21, 35);
+.jd_bg(@x,@y){
+    background-image: url(../images/jd-sprites.png);
+    background-size: 200px 200px;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-position: @x @y;
+}
+
+.good_title {
+    font-weight: 700;
+    color: #c91523;
+    padding: 5px 5px;
+}
+//广告
+.adv {
+    a {
+        width: 100%;
+        padding: 5px;
+    }
+}
+.view {
+    padding-bottom: 77px;
+}
+/*----- 头部开始---- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;   
+    width: 100%;
+    height: 40px;
+    padding:5px 50px 5px 70px;
+    background: rgba(201, 21, 35, 0);
+    z-index: 100;
+    .logo {
+        width: 70px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../images/jd-sprites.png);
+        background-size: 200px 200px;
+        background-position: 0px -110px;
+        background-origin: content-box;
+        background-clip: content-box;
+        padding: 9px 5px;
+    }
+    .seek {
+        height: 100%;
+        background: #9400ff;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 6px;
+            width: 20px;
+            height: 20px;
+            background-image: url(../images/jd-sprites.png);
+            background-size:200px 200px;
+            background-position: -60px -110px;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding-left: 30px;
+        }
+    }
+    .logoin{
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+    }
+    
+}
+/*----- 头部结束---- */
+/*----- 轮播图开始---- */
+.slider {
+    width: 100%;
+    overflow: hidden;
+   .slider_ul{
+       width: 1000%;
+       li {
+           float: left;
+           width: 10%;
+           img {
+               width: 100%;
+
+           }
+       }
+   }
+}
+/*----- 轮播图结束---- */
+
+
+/*----- 首页导航开始---- */
+.nav {
+    width: 100%;
+    ul{
+        width: 100%;
+        li{
+            width: 25%;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            a {
+                width: 100%;
+                padding: 5px;
+                img {
+                    width: 50%;
+                    display:inline-block;                       
+                }
+            }
+        }
+    }
+}
+/*----- 首页导航结束---- */
+.line {
+    height: 10px;
+    width: 100%;
+}
+
+/*----- 掌上秒杀开始---- */
+.seckill_time {
+    width: 100%;
+    padding: 5px;
+    // vertical-align: top;
+    .chart{
+        margin-left: 10px; 
+        vertical-align: middle;       
+        display: inline-block;
+        width: 18px;
+        height: 22px;
+        background-image: url(../images/jd-sprites.png);
+        background-size: 200px,200px;
+        background-position: -85px -110px;
+    }
+    .kill_text{
+        margin-left: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        color: @jd_red;
+
+    }
+    .down_time{
+        margin-left: 10px;
+        display: inline-block;
+        span {
+            background: rgb(61, 61, 61);
+            color: #fff;
+            padding: 1px;
+        }
+        span:nth-child(3n){
+            background: #fff;
+            color: rgb(61, 61, 61);
+        }
+
+    }
+    .more_kill{
+        float: right;
+    }
+}
+.seckill_content {
+    a{
+        display: block;
+        width: 33.33%;
+        float: left;
+        text-align: center;
+        padding-top: 15px;
+        position: relative;
+        span {
+            display:inline-block;
+            color:#fff;
+            font-size: 14px;
+            width: 46px;
+            height: 28px;
+            background: rgb(253, 182, 10);
+            border-radius: 50%;
+            position: absolute;
+            top: 84px;
+            right: 0px;
+            padding-top: 4px;
+        }
+        img{
+            width: 90%;
+        }
+        p{
+            color: @jd_red;
+        }
+    }
+}
+/*----- 掌上秒杀结束---- */
+
+/*----- 618结束---- */
+.roll{
+    position: relative;
+
+    .content{
+        padding: 10px;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        >a{
+            width: 50%;
+            float: left;
+        }
+    }
+}
+/*----- 618结束---- */
+/*----- 猜你喜欢开始---- */
+.guess{
+    a{
+        float: left;
+        width: 50%;
+    }
+    a:nth-child(-n+3){
+        width: 33.33%;
+    }
+}
+/*----- 猜你喜欢结束---- */
+/*----- 特色超市开始---- */
+.feature {
+    .ft_content {
+        a{
+            float: left;
+            width: 50%;
+        }
+        a:nth-child(4){
+            clear: both;
+        }
+    }
+}
+/*----- 特色超市结束---- */
+/*----- 主题街开始---- */
+.theme{
+    .th_content {
+        a {
+            float: left;
+            width: 25%;
+        }
+        a:nth-child(-n+2){
+            width: 50%;
+        }
+        a:nth-child(5){
+            clear: both;
+        }
+    }
+}
+/*----- 主题街结束---- */
+
+/*----- 品牌开始---- */
+.brand {
+    .bd_content{
+        a {
+            float: left;
+            width: 30%;
+        }
+        a:nth-child(1){
+            width: 40%;
+        }
+    }
+}
+/*----- 品牌结束---- */
+/*----- 喜欢开始---- */
+.love {
+    .lv_title {
+        padding: 10px;
+       a{
+           float: right;
+           font-size: 13px;
+           color: #c91523;
+           img {
+            //    float: left;
+               display: inline-block;
+               width: 18px;
+               height: 18px;
+               vertical-align:middle;
+           }
+       } 
+    }
+    .lv_content{
+        ul {
+            li {
+                width: 50%;
+                float: left;
+                padding: 6px 0px;
+                .lvc_content {
+                    padding: 0  14px 0  0;
+                    span {
+                        margin-left: 10px;
+                        color: #c91523;
+                    }
+                    a{
+                        float: right;
+                        color: #666;
+                        font-size: 12px;
+                        border: 1px solid #ccc;
+                    }
+                }
+                >a{
+                    img {
+                        width: 90%;
+                    }
+                    P{
+                        height: 38PX;
+                        margin: 0 11px;
+                        font-size: 14px;
+                        overflow: hidden;
+                        border-bottom: 1px solid #ccc; 
+                    }
+                }
+            }
+        }
+    }
+}
+/*----- 喜欢结束---- */
+
+/*----- 底部按钮开始---- */
+.set {
+    text-align: center;
+    color:#666;
+    font-size: 14px;
+    .load{
+        border-top: 1px solid #ccc;
+        padding: 10px 0;      
+    }
+    .click{
+        border-top: 1px solid #ccc;
+        padding: 10px 0px 10px 0px;
+        a {
+            width: 25%;
+            float:left;
+           border-right: 1px solid #000;  
+        } 
+        a:last-child{
+            border-right:none;
+        }
+    }
+    .pc {
+        padding: 10px 10px 10px 10px;
+        // padding: 20px;
+        border-top: 1px solid #ccc;
+        a{
+            float: left;
+            width: 33.33%;
+            span {
+                display: inline-block;
+                width: 33px;
+                height: 33px;
+            }
+        }
+        a:nth-child(1)>span{
+            .jd_bg(-120px , -70px);
+        }
+        a:nth-child(2)>span{
+            .jd_bg(-40px , -70px);
+        }
+        a:nth-child(3)>span{
+            .jd_bg(-80px , -70px);
+        }
+    }
+    .copyright{
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+}
+/*----- 底部按钮结束---- */
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        img {
+            width: 75px;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+
